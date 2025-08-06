@@ -3,6 +3,7 @@ on:
     branches: [ main ]
   schedule:
     - cron: '0 3 * * *'  # 每天 UTC 03:00 自动拉取上游并部署
+  workflow_dispatch:
 jobs:
   build-and-deploy:
     runs-on: [ self-hosted, linux, x86, os ]  # 指定已注册的 runner
